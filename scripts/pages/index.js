@@ -4,19 +4,7 @@ async function getPhotographers() {
     // et bien retourner le tableau photographers seulement une fois
     const response = await fetch('./data/photographers.json'); // anciennement requete ajax
     const photographer = await response.json();
-    //console.log(response);
     return photographer;
-    // photographers = data.photographers;
-    // console.log(data);
-    // console.log(photographers);
-    // return photographers
-    // });
-    // return {
-    //     photographers: []
-    // };
-    return {
-        photographers: [],
-    };
 }
 
 async function displayData(photographers) {
