@@ -15,7 +15,11 @@ async function displayData(photographers) {
     photographers.forEach((photographer) => {
         const photographerModel = photographerFactory(photographer);
         const userCardDOM = photographerModel.getUserCardDOM();
+        // const photographerLink = photographers.map(e=>e.id);
         photographersSection.appendChild(userCardDOM);
+        // userCardDOM.addEventListener('click', event=>{
+        // window.open(`photographer.html?${photographerLink}`, "_self")
+        // })
     });
 }
 
@@ -26,3 +30,13 @@ async function init() {
 }
 
 init();
+
+// // click sur un profil
+
+// document.addEventListener('click',e => {
+//     if(e.target.attributes('article')){
+//         const currentId = e.targe.parentElement.id // photographer id
+//         console.log(e);
+//         localStorage.setItem( 'id', currentId )
+//     }
+//   });

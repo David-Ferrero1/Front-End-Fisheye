@@ -48,6 +48,26 @@
     text-align: center;
 }
 
+.photograph-filter {
+    margin: 20px 100px;
+}
+
+.photograph-filter label {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 15px;
+    line-height: 23px;
+}
+
+.photograph-filter select {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: #911c1c;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
 form {
     display: flex;
     width: 100%;
