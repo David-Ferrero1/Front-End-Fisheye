@@ -42,13 +42,13 @@ header h1 {
     cursor: pointer;
 }
 
-.photographer-section article h2 {
+h2 {
     color: #d3573c;
     font-size: 36px;
     margin: 15px 0 0 0;
     line-height: 46.87px;
 }
-.photographer-section article h3 {
+h3 {
     color: #901c1c;
     font-size: 13px;
     font-weight: 400;
@@ -56,7 +56,8 @@ header h1 {
     margin: 2px;
 }
 
-.photographer-section article img {
+.photographer-section article img,
+span img {
     object-fit: cover;
     border-radius: 50%;
     height: 200px;

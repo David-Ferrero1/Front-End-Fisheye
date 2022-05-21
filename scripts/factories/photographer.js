@@ -26,9 +26,9 @@ function photographerFactory(data) {
         href.setAttribute('href', link);
 
         // ajout data Price
-        const prize = document.createElement('span');
-        prize.classList.add('prize');
-        prize.textContent = `${price} €/jour`;
+        const priceP = document.createElement('span');
+        priceP.classList.add('price');
+        priceP.textContent = `${price} €/jour`;
 
         article.appendChild(href);
         article.appendChild(img);
@@ -38,7 +38,7 @@ function photographerFactory(data) {
         article.appendChild(h2);
         article.appendChild(ville);
         article.appendChild(tag);
-        article.appendChild(prize);
+        article.appendChild(priceP);
         return article;
     }
     return { name, picture, id, country, tagline, price, city, getUserCardDOM };

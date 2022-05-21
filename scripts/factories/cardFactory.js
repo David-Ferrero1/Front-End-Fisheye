@@ -1,38 +1,39 @@
 function cardFactory(data) {
     const { name, portrait, id, city, country, tagline, price } = data;
-    const picture = `assets/photographers/PhotographersIDPhotos/${portrait}`;
+    const picture = `assets/images/Photographers ID Photos/${portrait}`;
 
     // Construction du bloc affichage fiche
     function getUserCard() {
-        const main = document.querySelector('main');
-        main.setAttribute('role', 'main');
         const photographHeader = document.querySelector('.photograph-header');
-        const tarif = document.querySelector('.price');
         const contact = document.createElement('article');
-        contact.setAttribute('role', 'article');
+        contact.setAttribute('role', 'info du protrait');
         contact.classList.add('portrait-info');
+        const button = document.createElement('button');
         const img = document.createElement('img');
         const spanImg = document.createElement('span');
         img.setAttribute('src', picture);
         img.setAttribute('alt', `Portrait de ${name}, ${city}-${country}`);
         img.setAttribute('aria-label', `Portrait de ${name}, ${city}`);
         img.setAttribute('role', 'img');
-        const h1 = document.createElement('h1');
-        const location = document.createElement('h2');
-        location.classList.add('location');
+        const h2 = document.createElement('h2');
+        const ville = document.createElement('h3');
+        ville.classList.add('ville');
 
         const info = document.createElement('p');
         const sectionInfo = document.createElement('div');
         sectionInfo.classList.add('portrait-info');
-        h1.textContent = name;
-        location.textContent = `${city} , ${country}`;
+        h2.textContent = name;
+        ville.textContent = `${city} , ${country}`;
         info.textContent = tagline;
+        button.classList.add('contact-button');
+        button.textContent = 'Contactez-moi';
+        button.setAttribute('onclick', 'displayModal()');
         spanImg.appendChild(img);
         photographHeader.appendChild(spanImg);
-        contact.appendChild(h1);
-        contact.appendChild(location);
+        photographHeader.appendChild(button);
+        contact.appendChild(h2);
+        contact.appendChild(ville);
         contact.appendChild(info);
-        tarif.textContent = `${price}€/jour`;
         return contact;
     }
     return { name, portrait, id, city, country, tagline, price, getUserCard };
