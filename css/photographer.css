@@ -1,5 +1,10 @@
 #contact_modal {
     display: none;
+    position: absolute;
+    top: 10px;
+    height: 100vh;
+    width: 200vh;
+    z-index: 5;
 }
 
 header {
@@ -68,6 +73,7 @@ span img {
 .modal header {
     justify-content: space-between;
     width: 100%;
+    margin: 0 auto;
 }
 
 .modal header img {
@@ -75,9 +81,10 @@ span img {
 }
 
 .modal header h2 {
-    font-size: 64px;
+    font-size: 55px;
     font-weight: normal;
-    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 form {
@@ -102,7 +109,40 @@ form div {
 
 form input {
     width: 100%;
-    height: 68px;
+    height: 48px;
     border: none;
     border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 170px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact-form-data[data-error]::after {
+    content: attr(data-error);
+    font-size: 0.9em;
+    color: red;
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: left;
+    line-height: 0.3;
+    opacity: 0;
+    transition: 0.3s;
+}
+.contact-form-data[data-error-visible='true']::after {
+    opacity: 1;
+}
+.contact-form-data[data-error-visible='true'] .text-control {
+    border: 4px solid red;
+}
+
+input[data-error]::after {
+    content: attr(data-error);
+    font-size: 0.9em;
+    color: red;
 }
