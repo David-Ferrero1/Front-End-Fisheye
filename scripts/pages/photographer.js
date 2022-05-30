@@ -1,6 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search); // on recherche dans l'url de la page
 const photographerLinkId = urlParams.get('id'); // on récupère l'Id du photographe dans l'url
 let photographers = [];
+let medias = [];
 
 // Récupération des données dans le fichier JSON
 async function getPhotographers() {
@@ -11,7 +12,6 @@ async function getPhotographers() {
     return photographers;
 }
 
-let medias = [];
 async function getPictures() {
     await fetch('data/photographers.json')
         .then((res) => res.json())
@@ -34,3 +34,15 @@ async function cardPhotographer() {
     photographHeader.appendChild(getUserCard);
 }
 cardPhotographer();
+
+async function displayGallery() {
+    await getPictures();
+    let gallery = [];
+    let logId;
+
+    const photographerGallery = document.querySelector('.portfolio');
+    const uniqGallery = galleryFactory(gallery);
+    const setPictures = uniqGallery.setPictures();
+    photographerGallery.appendChild(setPictures);
+    logId = gallery[0].photographerId;
+}  
