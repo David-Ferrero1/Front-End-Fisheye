@@ -11,6 +11,16 @@ async function getPhotographers() {
     return photographers;
 }
 
+let medias = [];
+async function getPictures() {
+    await fetch('data/photographers.json')
+        .then((res) => res.json())
+        .then((data) => (medias = data.media));
+
+    return medias;
+}
+getPictures();
+
 // Affichage de la card photographe
 async function cardPhotographer() {
     const photographHeader = document.querySelector('.photograph-header');

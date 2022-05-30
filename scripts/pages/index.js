@@ -30,13 +30,3 @@ async function init() {
 }
 
 init();
-
-// // click sur un profil
-
-// document.addEventListener('click',e => {
-//     if(e.target.attributes('article')){
-//         const currentId = e.targe.parentElement.id // photographer id
-//         console.log(e);
-//         localStorage.setItem( 'id', currentId )
-//     }
-//   });
