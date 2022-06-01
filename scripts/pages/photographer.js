@@ -16,6 +16,7 @@ async function getPictures() {
     await fetch('data/photographers.json')
         .then((res) => res.json())
         .then((data) => (medias = data.media));
+        console.log(medias);
 
     return medias;
 }
@@ -36,8 +37,7 @@ async function cardPhotographer() {
 cardPhotographer();
 
 async function displayGallery() {
-    await getPictures();
-    let gallery = [];
+    let gallery = await getPictures();
     let logId;
 
     const photographerGallery = document.querySelector('.portfolio');
@@ -46,3 +46,4 @@ async function displayGallery() {
     photographerGallery.appendChild(setPictures);
     logId = gallery[0].photographerId;
 }  
+displayGallery()

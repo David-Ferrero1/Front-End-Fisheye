@@ -2,7 +2,7 @@ function cardFactory(data) {
     const { name, portrait, id, city, country, tagline, price } = data;
     const picture = `assets/images/Photographers ID Photos/${portrait}`;
 
-    // Construction du bloc affichage fiche
+    // Affichage du bloc fiche
     function getUserCard() {
         const photographHeader = document.querySelector('.photograph-header');
         const contact = document.createElement('article');
