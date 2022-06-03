@@ -1,5 +1,4 @@
-
-let mediaSection = document.querySelector(".mediaSection");
+let mediaSection = document.querySelector('.mediaSection');
 
 // Récupération des données dans le fichier JSON
 async function getPhotographers(data) {
@@ -10,7 +9,7 @@ async function getPhotographers(data) {
 }
 
 function displayProfileCard(photographer) {
-    const container = document.querySelector(".profile");
+    const container = document.querySelector('.profile');
     const userCard = photographer.createProfileCard();
     container.appendChild(userCard);
 }
@@ -31,17 +30,17 @@ function displayMediaCard(media) {
 
 async function init() {
     const { photographers, media } = await getPhotographers();
-    
+
     const photographer = await getPhotographer(photographers);
     displayProfileCard(photographer);
     document.title = `${photographer.name} - Fisheye`;
 
-    const modalTitleName = document.getElementById("modal_titleName");
+    const modalTitleName = document.getElementById('modal_titleName');
     modalTitleName.textContent = photographer.name;
 
     const photographerMedia = await getMedia(media, photographer.id);
     sort(photographerMedia, sortByPopularity);
     displayLikeCounter(photographerMedia, photographer.price);
-};
+}
 
 init();
