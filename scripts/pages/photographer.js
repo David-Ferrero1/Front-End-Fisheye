@@ -1,6 +1,5 @@
 
-let photographers = [];
-let medias = [];
+let mediaSection = document.querySelector(".mediaSection");
 
 // Récupération des données dans le fichier JSON
 async function getPhotographers(data) {
@@ -16,17 +15,17 @@ function displayProfileCard(photographer) {
     container.appendChild(userCard);
 }
 
-/* Gets the media corresponding to the photographer id */
+/* CHercher les media correspondants aux photographer id */
 async function getMedia(data, photographerId) {
     return data.filter((media) => media.photographerId == photographerId);
 }
 
-/* Displays the media card components */
+/* Afficher la liste des medias */
 function displayMediaCard(media) {
     media.forEach((medium) => {
         const mediaData = new MediaFactory(medium, media);
         const mediaCard = mediaData.createMediaCard();
-        mediaContainer.appendChild(mediaCard);
+        mediaSection.appendChild(mediaCard);
     });
 }
 
