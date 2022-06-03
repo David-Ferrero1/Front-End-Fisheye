@@ -1,7 +1,7 @@
 class Photographer {
     constructor(photographer) {
         this.name = photographer.name;
-        this.picture = `assets/photographers/${photographer.portrait}`;
+        this.picture = `assets/images/Photographers ID Photos/${photographer.portrait}`;
         this.id = photographer.id;
         this.city = photographer.city;
         this.country = photographer.country;
@@ -9,7 +9,7 @@ class Photographer {
         this.tagline = photographer.tagline;
     }
 
-    createUserCard() {
+    getUserCardDOM() {
         const article = document.createElement('article');
         article.setAttribute('class', 'userCard');
 
@@ -32,7 +32,7 @@ class Photographer {
 
         const pLocation = document.createElement('p');
         pLocation.setAttribute('class', 'userCard_location');
-        pLocation.setAttribute('lang', 'en');
+        pLocation.setAttribute('lang', 'fr');
         pLocation.textContent = `${this.city}, ${this.country}`;
 
         const pTagline = document.createElement('p');

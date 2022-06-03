@@ -11,7 +11,7 @@ async function displayData(photographers) {
     );
 
     photographers.forEach((photographer) => {
-        const photographerModel = photographerFactory(photographer);
+        const photographerModel = new Photographer(photographer);
         const userCardDOM = photographerModel.getUserCardDOM();
         // const photographerLink = photographers.map(e=>e.id);
         photographersSection.appendChild(userCardDOM);
