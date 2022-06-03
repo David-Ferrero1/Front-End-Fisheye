@@ -1,45 +1,10 @@
-function photographerFactory(data) {
-    const { name, portrait, id, city, country, tagline, price } = data;
-
-    const picture = `assets/images/Photographers ID Photos/${portrait}`;
-    const link = `photographer.html?id=${data.id}`;
-
-    // Création card sur index.html
-    function getUserCardDOM() {
-        const article = document.createElement('article');
-        const img = document.createElement('img');
-        img.setAttribute('src', picture);
-        const h2 = document.createElement('h2');
-        const spanImg = document.createElement('span');
-        h2.textContent = name;
-
-        // ajout data ville
-        const ville = document.createElement('h3');
-        ville.classList.add('ville');
-        ville.textContent = `${city}, ${country}`;
-
-        // ajout data TAG
-        const tag = document.createElement('p');
-        tag.classList.add('tag');
-        tag.textContent = tagline;
-        const href = document.createElement('a');
-        href.setAttribute('href', link);
-
-        // ajout data Price
-        const priceP = document.createElement('span');
-        priceP.classList.add('price');
-        priceP.textContent = `${price} €/jour`;
-
-        article.appendChild(href);
-        article.appendChild(img);
-        article.appendChild(spanImg);
-        spanImg.appendChild(img);
-        href.appendChild(spanImg);
-        article.appendChild(h2);
-        article.appendChild(ville);
-        article.appendChild(tag);
-        article.appendChild(priceP);
-        return article;
+class Photographer {
+    constructor(photographer) {
+        this.name = photographer.name;
+        this.picture = `assets/photographers/${photographer.portrait}`;
+        this.id = photographer.id;
+        this.city = photographer.city;
+        this.country = photographer.country;
+        this.price = photographer.price;
+        this.tagline = photographer.tagline;
     }
-    return { name, picture, id, country, tagline, price, city, getUserCardDOM };
-}

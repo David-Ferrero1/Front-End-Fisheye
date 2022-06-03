@@ -7,20 +7,22 @@ let medias = [];
 async function getPhotographers() {
     await fetch(`data/photographers.json`)
         .then((res) => res.json())
-        .then((data) => (photographers = data.photographers));
+        .then((data) => {
+            photographers = data.photographers
+        });
 
     return photographers;
 }
 
-async function getPictures() {
+async function getMedias() {
     await fetch('data/photographers.json')
         .then((res) => res.json())
         .then((data) => (medias = data.media));
-        console.log(medias);
 
     return medias;
 }
-getPictures();
+
+getMedias();
 
 // Affichage de la card photographe
 async function cardPhotographer() {

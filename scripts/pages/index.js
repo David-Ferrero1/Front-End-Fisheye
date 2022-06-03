@@ -1,8 +1,5 @@
-async function getPhotographers() {
-    // Penser à remplacer par les données récupérées dans le json
-    let photographers = [];
-    // et bien retourner le tableau photographers seulement une fois
-    const response = await fetch('./data/photographers.json'); // anciennement requete ajax
+async function getPhotographers() {    let photographers = [];
+    const response = await fetch('./data/photographers.json'); 
     const photographer = await response.json();
     return photographer;
 }
@@ -17,9 +14,6 @@ async function displayData(photographers) {
         const userCardDOM = photographerModel.getUserCardDOM();
         // const photographerLink = photographers.map(e=>e.id);
         photographersSection.appendChild(userCardDOM);
-        // userCardDOM.addEventListener('click', event=>{
-        // window.open(`photographer.html?${photographerLink}`, "_self")
-        // })
     });
 }
 
