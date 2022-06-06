@@ -1,7 +1,7 @@
 class Photographer {
     constructor(photographer) {
         this.name = photographer.name;
-        this.picture = `assets/images/Photographers ID Photos/${photographer.portrait}`;
+        this.picture = `assets/images/PhotographersID_Photo/${photographer.portrait}`;
         this.id = photographer.id;
         this.city = photographer.city;
         this.country = photographer.country;

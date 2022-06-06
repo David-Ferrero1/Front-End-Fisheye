@@ -3,9 +3,10 @@ let mediaSection = document.querySelector('.media-section');
 // Récupération des données dans le fichier JSON
 async function getPhotographers(data) {
     const urlParams = new URLSearchParams(window.location.search); // on recherche dans l'url de la page
-    const photographerLinkId = urlParams.get('id'); // on récupère l'Id du photographe dans l'url
+    const id = urlParams.get('id'); // on récupère l'Id du photographe dans l'url
+    console.log(id);
 
-    return new Photographer(data.find((p) => p.id == photographerLinkId));
+    return new Photographer(data.find((p) => p.id == id));
 }
 
 function displayProfileCard(photographer) {
