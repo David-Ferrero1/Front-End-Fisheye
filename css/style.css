@@ -80,10 +80,9 @@ h1 {
 .userCard_picture {
     height: 200px;
     width: 200px;
-    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
-    outline: none;
+    box-shadow: 2px 10px 54px -8px rgba(0,0,0,0.75);
     transition: all 0.3s ease;
 }
 
@@ -124,7 +123,7 @@ h1 {
 
 .userCard_link:hover .userCard_picture,
 .userCard_link:focus .userCard_picture {
-    outline: 8px solid #901c1c;
+    transform: scale(1.06);
 }
 
 .userCard_link:hover .userCard_name:after,

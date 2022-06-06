@@ -9,7 +9,7 @@ const submitButton = document.querySelector('.modal_form_submit');
 
 function displayModal() {
     modal.style.display = 'flex';
-    header.setAttribute('aria-hidden', true);
+    // header.setAttribute('aria-hidden', true);
     main.setAttribute('aria-hidden', true);
     body.style.height = '100vh';
     body.style.width = '100vw';
@@ -19,7 +19,7 @@ function displayModal() {
 
 function closeModal() {
     modal.style.display = 'none';
-    header.setAttribute('aria-hidden', false);
+    // header.setAttribute('aria-hidden', false);
     main.setAttribute('aria-hidden', false);
     body.style.height = '100%';
     body.style.width = '100%';
