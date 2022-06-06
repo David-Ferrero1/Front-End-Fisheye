@@ -1,6 +1,6 @@
 const modal = document.getElementById('modalContainer');
 const body = document.querySelector('body');
-const closeIcon = document.querySelector('.modal_close');
+const closeIcon = document.querySelector('.modal-close');
 const firstNameForm = document.getElementById('firstName');
 const lastNameForm = document.getElementById('lastName');
 const emailForm = document.getElementById('email');

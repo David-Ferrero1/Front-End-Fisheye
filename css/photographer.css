@@ -142,7 +142,7 @@ fieldset {
     margin-bottom: calc(10rem / 16);
 }
 
-.modal_close {
+.modal-close {
     font-size: calc(42rem / 16);
     cursor: pointer;
     position: absolute;
@@ -154,7 +154,7 @@ fieldset {
     align-items: center;
 }
 
-.modal_closeLabel {
+.modal-close-label {
     opacity: 0;
     font-size: 1rem;
     color: white;
@@ -163,8 +163,8 @@ fieldset {
     transition: all 0.4s ease;
 }
 
-.modal_close:hover .modal_closeLabel,
-.modal_close:focus .modal_closeLabel {
+.modal-close:hover .modal-close-label,
+.modal-close:focus .modal-close-label {
     opacity: 1;
     transform: translateY(0);
 }
@@ -209,24 +209,24 @@ fieldset {
 }
 /* Tri */
 
-.mediaSorter {
+.media-sorter {
     margin: 60px 100px 0px;
     display: flex;
     align-items: center;
 }
 
-#mediaSorter_label {
+#media-sorter-label {
     font-weight: 700;
     font-size: calc(18rem / 16);
 }
 
-.mediaSorter_select {
+.media-sorter-select {
     margin-left: 20px;
     position: relative;
     width: fit-content;
 }
 
-.mediaSorter_button {
+.media-sorter-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -235,11 +235,11 @@ fieldset {
     padding: calc(14rem / 16) calc(20rem / 16);
 }
 
-.mediaSorter_button_text {
+.media-sorter-button-text {
     margin-right: calc(26rem / 16);
 }
 
-.mediaSorter_listbox {
+.media-sorter-listbox {
     list-style: none;
     position: absolute;
     display: none;
@@ -259,7 +259,7 @@ fieldset {
     z-index: 2;
 }
 
-.mediaSorter_option {
+.media-sorter-option {
     display: flex;
     cursor: pointer;
     padding: calc(14rem / 16) calc(20rem / 16);
@@ -268,23 +268,23 @@ fieldset {
     position: relative;
 }
 
-.mediaSorter_option:first-child {
+.media-sorter-option:first-child {
     border-radius: 5px 5px 0px 0px;
     justify-content: space-between;
     align-items: center;
 }
 
-.mediaSorter_option:not(:first-child) {
+.media-sorter-option:not(:first-child) {
     flex-direction: column;
     justify-content: center;
     align-items: start;
 }
 
-.mediaSorter_option:last-child {
+.media-sorter-option:last-child {
     border-radius: 0px 0px 5px 5px;
 }
 
-.mediaSorter_option:not(:first-child):before {
+.media-sorter-option:not(:first-child):before {
     content: '';
     width: calc(100% - (40rem / 16));
     height: 1px;
@@ -293,13 +293,13 @@ fieldset {
     top: 0;
 }
 
-.mediaSorter_option:hover,
-.mediaSorter_option:focus {
+.media-sorter-option:hover,
+.media-sorter-option:focus {
     color: black;
     background-color: #d3573c;
 }
 
-.mediaSorter_option_icon {
+.media-sorter-option-icon {
     transform: rotate(180deg);
     margin-left: calc(26rem / 16);
 }

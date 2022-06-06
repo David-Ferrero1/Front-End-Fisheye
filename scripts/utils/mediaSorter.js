@@ -1,6 +1,6 @@
-const listbox = document.querySelector('.mediaSorter_listbox');
-const button = document.querySelector('.mediaSorter_button');
-const selectDefaultValue = document.querySelector('.mediaSorter_button_text');
+const listbox = document.querySelector('.media-sorter-listbox');
+const button = document.querySelector('.media-sorter-button');
+const selectDefaultValue = document.querySelector('.media-sorter-button-text');
 
 /* Shows dropdown if it's hidden, and hides it if it's showing */
 function toggleDropdown() {
@@ -23,7 +23,7 @@ document.addEventListener(
     'click',
     function (event) {
         if (
-            !event.target.closest('.mediaSorter_button') &&
+            !event.target.closest('.media-sorter-button') &&
             listbox.style.display == 'flex'
         ) {
             closeDropdown();
