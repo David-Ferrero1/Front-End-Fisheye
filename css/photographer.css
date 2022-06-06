@@ -207,9 +207,9 @@ fieldset {
     padding: calc(23rem / 16) calc(50rem / 16);
     margin-top: 5px;
 }
- /* Tri */
+/* Tri */
 
- .mediaSorter {
+.mediaSorter {
     margin: 60px 100px 0px;
     display: flex;
     align-items: center;
@@ -245,11 +245,11 @@ fieldset {
     display: none;
     flex-direction: column;
     align-items: start;
-    background-color: #911C1C;
+    background-color: #911c1c;
     color: white;
     font-weight: 700;
     font-size: calc(18rem / 16);
-    font-family: "DM Sans", sans-serif;
+    font-family: 'DM Sans', sans-serif;
     width: 100%;
     top: 0;
     left: 0;
@@ -285,7 +285,7 @@ fieldset {
 }
 
 .mediaSorter_option:not(:first-child):before {
-    content: "";
+    content: '';
     width: calc(100% - (40rem / 16));
     height: 1px;
     background-color: white;
@@ -293,9 +293,10 @@ fieldset {
     top: 0;
 }
 
-.mediaSorter_option:hover, .mediaSorter_option:focus {
+.mediaSorter_option:hover,
+.mediaSorter_option:focus {
     color: black;
-    background-color: #D3573C;
+    background-color: #d3573c;
 }
 
 .mediaSorter_option_icon {
