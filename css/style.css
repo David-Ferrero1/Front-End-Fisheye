@@ -40,6 +40,26 @@ h1 {
     height: 50px;
 }
 
+.buttonPrimary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: calc(20rem / 16);
+    font-weight: bold;
+    color: white;
+    padding: calc(11rem / 16);
+    height: calc(70rem / 16);
+    border: none;
+    background-color: #901c1c;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttonPrimary:hover,
+.buttonPrimary:focus {
+    color: black;
+    background-color: #d3573c;
+}
+
 .userCard {
     display: flex;
     flex-direction: column;
@@ -110,24 +130,4 @@ h1 {
 .userCard_link:hover .userCard_name:after,
 .userCard_link:focus .userCard_name:after {
     width: 100%;
-}
-
-.buttonPrimary {
-    font-family: 'DM Sans', sans-serif;
-    font-size: calc(20rem / 16);
-    font-weight: bold;
-    color: white;
-    padding: calc(11rem / 16);
-    height: calc(70rem / 16);
-    border: none;
-    background-color: #901c1c;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.buttonPrimary:hover,
-.buttonPrimary:focus {
-    color: black;
-    background-color: #d3573c;
 }

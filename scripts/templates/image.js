@@ -5,11 +5,8 @@ class Image extends Media {
     }
 
     createMediaCard() {
-        const media = document.createElement('img');
-        media.setAttribute(
-            'src',
-            `assets/images/${this.photographerId}/${this.image}`,
-        );
+        const media = document.createElement("img");
+        media.setAttribute("src", `assets/photographers/${this.photographerId}/${this.image}`);
         return this.createMediaCaption(media, this.mediaArray, this.data);
     }
 }
