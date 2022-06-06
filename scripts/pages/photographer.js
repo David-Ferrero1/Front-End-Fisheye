@@ -1,4 +1,4 @@
-let mediaSection = document.querySelector('.mediaSection');
+let mediaSection = document.querySelector('.media-section');
 
 // Récupération des données dans le fichier JSON
 async function getPhotographers(data) {

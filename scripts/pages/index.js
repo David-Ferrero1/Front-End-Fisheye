@@ -1,9 +1,9 @@
-async function getPhotographers() {
-    let photographers = [];
-    const response = await fetch('./data/photographers.json');
-    const photographer = await response.json();
-    return photographer;
-}
+// async function getPhotographers() {
+//     let photographers = [];
+//     const response = await fetch('./data/photographers.json');
+//     const photographer = await response.json();
+//     return photographer;
+// }
 
 async function displayData(photographers) {
     const photographersSection = document.querySelector(
