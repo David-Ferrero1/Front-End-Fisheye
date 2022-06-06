@@ -56,7 +56,7 @@
 
 .mediaCard:hover,
 .mediaCard:focus {
-    outline: 8px solid #db8876;
+    transform: rotate(-5deg);
 }
 
 .mediaCard_caption {

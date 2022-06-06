@@ -32,7 +32,7 @@ class Photographer {
 
         const pLocation = document.createElement('p');
         pLocation.setAttribute('class', 'userCard_location');
-        pLocation.setAttribute('lang', 'en');
+        pLocation.setAttribute('lang', 'fr');
         pLocation.textContent = `${this.city}, ${this.country}`;
 
         const pTagline = document.createElement('p');
@@ -65,7 +65,7 @@ class Photographer {
         const pLocation = document.createElement('p');
         pLocation.setAttribute('class', 'profileCard_location');
         pLocation.textContent = `${this.city}, ${this.country}`;
-        pLocation.setAttribute('lang', 'en');
+        pLocation.setAttribute('lang', 'fr');
 
         const pTagline = document.createElement('p');
         pTagline.setAttribute('class', 'profileCard_tagline');
