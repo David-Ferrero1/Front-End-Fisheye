@@ -135,7 +135,7 @@ fieldset {
     margin: auto;
 }
 
-.modal_title {
+.modal-title {
     font-size: calc(64rem / 16);
     font-weight: normal;
     line-height: 1;
@@ -176,12 +176,12 @@ fieldset {
     align-items: flex-start;
 }
 
-.modal_form_label {
+.modal-form-label {
     color: #312e2e;
     font-size: calc(36rem / 16);
 }
 
-.modal_form_input {
+.modal-form-input {
     width: 100%;
     font-size: calc(40rem / 16);
     border: none;
@@ -192,17 +192,17 @@ fieldset {
     padding: calc(12rem / 16);
 }
 
-.modal_form_inputComment {
+.modal-form-input-comment {
     height: calc(100rem / 16);
 }
 
-.modal_form_input::placeholder {
+.modal-form-input::placeholder {
     font-family: 'DM Sans', sans-serif;
     font-size: calc(24rem / 16);
     color: rgba(150, 150, 150, 1);
 }
 
-.modal_form_submit {
+.modal-form-submit {
     font-size: calc(18rem / 16);
     padding: calc(23rem / 16) calc(50rem / 16);
     margin-top: 5px;

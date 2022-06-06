@@ -40,7 +40,7 @@ h1 {
     height: 50px;
 }
 
-.buttonPrimary {
+.button-principal {
     font-family: 'DM Sans', sans-serif;
     font-size: calc(20rem / 16);
     font-weight: bold;
@@ -54,8 +54,8 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.buttonPrimary:hover,
-.buttonPrimary:focus {
+.button-principal:hover,
+.button-principal:focus {
     color: black;
     background-color: #d3573c;
 }

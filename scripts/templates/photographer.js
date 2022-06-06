@@ -76,7 +76,7 @@ class Photographer {
         caption.appendChild(pTagline);
 
         const button = document.createElement('button');
-        button.setAttribute('class', 'buttonPrimary');
+        button.setAttribute('class', 'button-principal');
         button.textContent = 'Contactez-moi';
         button.addEventListener('click', displayModal);
 

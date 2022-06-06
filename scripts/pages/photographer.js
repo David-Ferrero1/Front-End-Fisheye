@@ -55,7 +55,7 @@ async function init() {
     displayProfileCard(photographer);
     document.title = `${photographer.name} - Fisheye`;
 
-    const modalTitleName = document.getElementById('modal_titleName');
+    const modalTitleName = document.getElementById('modal-titleName');
     modalTitleName.textContent = photographer.name;
 
     const photographerMedia = await getMedia(media, photographer.id);

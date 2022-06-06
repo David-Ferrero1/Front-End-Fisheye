@@ -5,7 +5,7 @@ const firstNameForm = document.getElementById('firstName');
 const lastNameForm = document.getElementById('lastName');
 const emailForm = document.getElementById('email');
 const messageForm = document.getElementById('message');
-const submitButton = document.querySelector('.modal_form_submit');
+const submitButton = document.querySelector('.modal-form-submit');
 
 function displayModal() {
     modal.style.display = 'flex';
