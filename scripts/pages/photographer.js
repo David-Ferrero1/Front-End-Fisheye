@@ -1,10 +1,10 @@
-const mediaContainer = document.querySelector(".mediaList");
+const mediaContainer = document.querySelector('.mediaList');
 
 /* Gets the photographer from the id in the URL */
 async function getPhotographer(data) {
     const url = window.location.search;
     const urlParams = new URLSearchParams(url);
-    const id = urlParams.get("id");
+    const id = urlParams.get('id');
 
     // return data.find((p) => p.id == id);
     return new Photographer(data.find((p) => p.id == id));
@@ -12,7 +12,7 @@ async function getPhotographer(data) {
 
 /* Displays the profile card component */
 function displayProfileCard(photographer) {
-    const container = document.querySelector(".profile");
+    const container = document.querySelector('.profile');
     const userCard = photographer.createProfileCard();
     container.appendChild(userCard);
 }
@@ -34,10 +34,10 @@ function displayMediaCard(media) {
 /* Adds likes from all media */
 function totalLikes(media) {
     let sum = 0;
-    media.map(medium => {
+    media.map((medium) => {
         sum += medium.likes;
     });
-    return(sum);
+    return sum;
 }
 
 /* Displays the like counter component */
@@ -50,47 +50,47 @@ function totalLikes(media) {
 /* Runs all functions above + adds on click and on keydown events for media sorter functions  */
 async function init() {
     const { photographers, media } = await getPhotographers();
-    
+
     const photographer = await getPhotographer(photographers);
     displayProfileCard(photographer);
     document.title = `${photographer.name} - Fisheye`;
 
-    const modalTitleName = document.getElementById("modal_titleName");
+    const modalTitleName = document.getElementById('modal_titleName');
     modalTitleName.textContent = photographer.name;
 
     const photographerMedia = await getMedia(media, photographer.id);
     sort(photographerMedia, sortByPopularity);
     // displayLikeCounter(photographerMedia, photographer.price);
 
-    const optionLikes = document.getElementById("likes");
-    optionLikes.addEventListener("click", function() {
+    const optionLikes = document.getElementById('likes');
+    optionLikes.addEventListener('click', function () {
         sort(photographerMedia, sortByPopularity);
     });
-    optionLikes.addEventListener("keydown", function(event) {
-        if(event.code == "Enter" || event.code == "Space") {
+    optionLikes.addEventListener('keydown', function (event) {
+        if (event.code == 'Enter' || event.code == 'Space') {
             sort(photographerMedia, sortByPopularity);
         }
     });
 
-    const optionDate = document.getElementById("date");
-    optionDate.addEventListener("click", function() {
+    const optionDate = document.getElementById('date');
+    optionDate.addEventListener('click', function () {
         sort(photographerMedia, sortByDate);
     });
-    optionDate.addEventListener("keydown", function(event) {
-        if(event.code == "Enter" || event.code == "Space") {
+    optionDate.addEventListener('keydown', function (event) {
+        if (event.code == 'Enter' || event.code == 'Space') {
             sort(photographerMedia, sortByDate);
         }
     });
-    
-    const optionTitle = document.getElementById("title");
-    optionTitle.addEventListener("click", function() {
+
+    const optionTitle = document.getElementById('title');
+    optionTitle.addEventListener('click', function () {
         sort(photographerMedia, sortByTitle);
     });
-    optionTitle.addEventListener("keydown", function(event) {
-        if(event.code == "Enter" || event.code == "Space") {
+    optionTitle.addEventListener('keydown', function (event) {
+        if (event.code == 'Enter' || event.code == 'Space') {
             sort(photographerMedia, sortByTitle);
         }
     });
-};
+}
 
 init();
