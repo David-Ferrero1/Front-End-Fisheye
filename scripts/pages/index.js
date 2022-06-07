@@ -1,5 +1,5 @@
 async function displayData(photographers) {
-    const photographersSection = document.querySelector('.userList');
+    const photographersSection = document.querySelector('.user-list');
 
     photographers.forEach((photographer) => {
         const photographerObject = new Photographer(photographer);

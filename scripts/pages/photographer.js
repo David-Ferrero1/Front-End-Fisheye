@@ -1,4 +1,4 @@
-const mediaContainer = document.querySelector('.mediaList');
+const mediaContainer = document.querySelector('.portfolio');
 
 /* Gets the photographer from the id in the URL */
 async function getPhotographer(data) {
@@ -41,10 +41,10 @@ function totalLikes(media) {
 }
 
 /* Displays the like counter component */
-// async function displayLikeCounter(media, price) {
-//     const likeCounterContainer = document.querySelector(".likeCounter");
-//     const likeCounter = createLikeCounter(totalLikes(media), price);
-//     likeCounterContainer.appendChild(likeCounter);
+// async function displaylike-counter(media, price) {
+//     const like-counterContainer = document.querySelector(".like-counter");
+//     const like-counter = createlike-counter(totalLikes(media), price);
+//     like-counterContainer.appendChild(like-counter);
 // }
 
 /* Runs all functions above + adds on click and on keydown events for media sorter functions  */
@@ -60,7 +60,7 @@ async function init() {
 
     const photographerMedia = await getMedia(media, photographer.id);
     sort(photographerMedia, sortByPopularity);
-    // displayLikeCounter(photographerMedia, photographer.price);
+    // displaylike-counter(photographerMedia, photographer.price);
 
     const optionLikes = document.getElementById('likes');
     optionLikes.addEventListener('click', function () {
