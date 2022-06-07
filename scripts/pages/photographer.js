@@ -44,7 +44,6 @@ async function init() {
 
     const photographerMedia = await getMedia(media, photographer.id);
     sort(photographerMedia, sortByPopularity);
-    
 
     const optionLikes = document.getElementById('likes');
     optionLikes.addEventListener('click', function () {

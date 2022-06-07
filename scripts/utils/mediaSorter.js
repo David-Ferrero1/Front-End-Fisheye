@@ -43,19 +43,19 @@ document.addEventListener(
     false,
 );
 
-//  tri media par date 
+//  tri media par date
 function sortByDate(a, b) {
     const aDate = new Date(a.date);
     const bDate = new Date(b.date);
     return bDate - aDate;
 }
 
-//  tri media par popularity 
+//  tri media par popularity
 function sortByPopularity(a, b) {
     return b.likes - a.likes;
 }
 
-//  tri media par title 
+//  tri media par title
 function sortByTitle(a, b) {
     return a.title.localeCompare(b.title);
 }
