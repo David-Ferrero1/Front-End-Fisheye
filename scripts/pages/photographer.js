@@ -40,14 +40,13 @@ function totalLikes(media) {
     return sum;
 }
 
-/* Displays the like counter component */
+
 // async function displaylike-counter(media, price) {
 //     const like-counterContainer = document.querySelector(".like-counter");
 //     const like-counter = createlike-counter(totalLikes(media), price);
 //     like-counterContainer.appendChild(like-counter);
 // }
 
-/* Runs all functions above + adds on click and on keydown events for media sorter functions  */
 async function init() {
     const { photographers, media } = await getPhotographers();
 
