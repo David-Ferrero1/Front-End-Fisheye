@@ -60,7 +60,7 @@ async function init() {
 
     const photographerMedia = await getMedia(media, photographer.id);
     sort(photographerMedia, sortByPopularity);
-    // displaylike-counter(photographerMedia, photographer.price);
+    
 
     const optionLikes = document.getElementById('likes');
     optionLikes.addEventListener('click', function () {
