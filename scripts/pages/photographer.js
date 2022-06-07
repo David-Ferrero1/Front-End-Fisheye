@@ -1,6 +1,6 @@
 const mediaContainer = document.querySelector('.portfolio');
 
-/* Gets the photographer from the id in the URL */
+// Prendre l'ID dans l'URL
 async function getPhotographer(data) {
     const url = window.location.search;
     const urlParams = new URLSearchParams(url);
@@ -10,19 +10,19 @@ async function getPhotographer(data) {
     return new Photographer(data.find((p) => p.id == id));
 }
 
-/* Displays the profile card component */
+// Affichage du profil
 function displayProfileCard(photographer) {
     const container = document.querySelector('.profile');
     const userCard = photographer.createProfileCard();
     container.appendChild(userCard);
 }
 
-/* Gets the media corresponding to the photographer id */
+// Obtenir les media par photograph
 async function getMedia(data, photographerId) {
     return data.filter((media) => media.photographerId == photographerId);
 }
 
-/* Displays the media card components */
+// Affichage des media
 function displayMediaCard(media) {
     media.forEach((medium) => {
         const mediaData = new MediaFactory(medium, media);
@@ -31,22 +31,7 @@ function displayMediaCard(media) {
     });
 }
 
-/* Adds likes from all media */
-function totalLikes(media) {
-    let sum = 0;
-    media.map((medium) => {
-        sum += medium.likes;
-    });
-    return sum;
-}
-
-
-// async function displaylike-counter(media, price) {
-//     const like-counterContainer = document.querySelector(".like-counter");
-//     const like-counter = createlike-counter(totalLikes(media), price);
-//     like-counterContainer.appendChild(like-counter);
-// }
-
+//On lance init
 async function init() {
     const { photographers, media } = await getPhotographers();
 
