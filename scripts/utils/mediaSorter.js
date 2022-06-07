@@ -2,7 +2,7 @@ const listbox = document.querySelector('.media-sorter-listbox');
 const button = document.querySelector('.media-sorter-button');
 const selectDefaultValue = document.querySelector('.media-sorter-button-text');
 
-/* Shows dropdown if it's hidden, and hides it if it's showing */
+// Dropdown du tri
 function toggleDropdown() {
     if (listbox.style.display == 'flex') {
         listbox.style.display = 'none';
@@ -13,12 +13,12 @@ function toggleDropdown() {
 
 button.addEventListener('click', toggleDropdown);
 
-/* Closes dropdown */
+// Closes dropdown
 function closeDropdown() {
     listbox.style.display = 'none';
 }
 
-/* Closes dropdown if the user clicks outside of it */
+// fermer le dropdown au clic sur la page
 document.addEventListener(
     'click',
     function (event) {
@@ -32,7 +32,7 @@ document.addEventListener(
     false,
 );
 
-/* Closes dropdown if the user taps escape when it's open */
+// Fermer le dropdown avec echap
 document.addEventListener(
     'keydown',
     function (event) {
@@ -43,24 +43,24 @@ document.addEventListener(
     false,
 );
 
-/* Sorts media by date */
+//  tri media par date 
 function sortByDate(a, b) {
     const aDate = new Date(a.date);
     const bDate = new Date(b.date);
     return bDate - aDate;
 }
 
-/* Sorts media by popularity */
+//  tri media par popularity 
 function sortByPopularity(a, b) {
     return b.likes - a.likes;
 }
 
-/* Sorts media by title */
+//  tri media par title 
 function sortByTitle(a, b) {
     return a.title.localeCompare(b.title);
 }
 
-/* Sorts media based on input function */
+//  tri media sur bouton
 function sort(media, sortingFunc) {
     media.sort(sortingFunc);
     switch (sortingFunc) {

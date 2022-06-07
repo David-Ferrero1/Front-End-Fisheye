@@ -9,7 +9,6 @@ const submitButton = document.querySelector('.modal-form-submit');
 
 function displayModal() {
     modal.style.display = 'flex';
-    // header.setAttribute('aria-hidden', true);
     main.setAttribute('aria-hidden', true);
     body.style.height = '100vh';
     body.style.width = '100vw';
@@ -19,7 +18,6 @@ function displayModal() {
 
 function closeModal() {
     modal.style.display = 'none';
-    // header.setAttribute('aria-hidden', false);
     main.setAttribute('aria-hidden', false);
     body.style.height = '100%';
     body.style.width = '100%';
