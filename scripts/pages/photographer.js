@@ -38,9 +38,9 @@ function totalLikes(media) {
     return(sum);
 }
 
-async function displayLikeCounter(media, ) {
+async function displayLikeCounter(media, price) {
     const likeCounterContainer = document.querySelector(".likeCounter");
-    const likeCounter = createLikeCounter(totalLikes(media), );
+    const likeCounter = createLikeCounter(totalLikes(media), price);
     likeCounterContainer.appendChild(likeCounter);
 }
 
