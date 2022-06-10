@@ -15,11 +15,11 @@ class Media {
         media.setAttribute('class', 'mediaCard');
         media.setAttribute('role', 'link');
         media.setAttribute('tabindex', 0);
-        media.addEventListener("click", function () {
+        media.addEventListener('click', function () {
             openLightbox(mediaArray, mediaArray.indexOf(data));
         });
-        media.addEventListener("keydown", function (event) {
-            if (event.code == "Enter" || event.code == "Space") {
+        media.addEventListener('keydown', function (event) {
+            if (event.code == 'Enter' || event.code == 'Space') {
                 openLightbox(mediaArray, mediaArray.indexOf(data));
             }
         });
@@ -49,18 +49,18 @@ class Media {
         likeIcon.setAttribute('class', 'fas fa-heart');
         likeButton.setAttribute('aria-label', 'likes');
         likeButton.setAttribute('lang', 'fr');
-        likeButton.addEventListener("click", function () {
+        likeButton.addEventListener('click', function () {
             if (liked == false) {
-                likeButton.classList.remove("mediaCard_likeButton--notLiked");
-                likeButton.classList.add("mediaCard_likeButton--liked");
+                likeButton.classList.remove('mediaCard_likeButton--notLiked');
+                likeButton.classList.add('mediaCard_likeButton--liked');
                 likeAmount.textContent = currentLikes + 1;
-                let likeCounter = document.querySelector(".likeCounter_amount");
+                let likeCounter = document.querySelector('.likeCounter_amount');
                 likeCounter.textContent = parseInt(likeCounter.textContent) + 1;
             } else {
-                likeButton.classList.remove("mediaCard_likeButton--liked");
-                likeButton.classList.add("mediaCard_likeButton--notLiked");
+                likeButton.classList.remove('mediaCard_likeButton--liked');
+                likeButton.classList.add('mediaCard_likeButton--notLiked');
                 likeAmount.textContent = currentLikes;
-                let likeCounter = document.querySelector(".likeCounter_amount");
+                let likeCounter = document.querySelector('.likeCounter_amount');
                 likeCounter.textContent = parseInt(likeCounter.textContent) - 1;
             }
             liked = !liked;
@@ -79,4 +79,3 @@ class Media {
         return article;
     }
 }
-

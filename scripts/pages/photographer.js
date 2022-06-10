@@ -32,14 +32,14 @@ function displayMediaCard(media) {
 
 function totalLikes(media) {
     let sum = 0;
-    media.map(medium => {
+    media.map((medium) => {
         sum += medium.likes;
     });
-    return(sum);
+    return sum;
 }
 
 async function displayLikeCounter(media, price) {
-    const likeCounterContainer = document.querySelector(".likeCounter");
+    const likeCounterContainer = document.querySelector('.likeCounter');
     const likeCounter = createLikeCounter(totalLikes(media), price);
     likeCounterContainer.appendChild(likeCounter);
 }
