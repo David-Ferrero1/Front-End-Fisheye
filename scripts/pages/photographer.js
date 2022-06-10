@@ -39,7 +39,7 @@ function totalLikes(media) {
 }
 
 async function displayLikeCounter(media, price) {
-    const likeCounterContainer = document.querySelector('.likeCounter');
+    const likeCounterContainer = document.querySelector('.like-counter');
     const likeCounter = createLikeCounter(totalLikes(media), price);
     likeCounterContainer.appendChild(likeCounter);
 }
@@ -57,6 +57,7 @@ async function init() {
 
     const photographerMedia = await getMedia(media, photographer.id);
     sort(photographerMedia, sortByPopularity);
+    displayLikeCounter(photographerMedia, photographer.price);
 
     const optionLikes = document.getElementById('likes');
     optionLikes.addEventListener('click', function () {
