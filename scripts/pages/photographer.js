@@ -6,7 +6,6 @@ async function getPhotographer(data) {
     const urlParams = new URLSearchParams(url);
     const id = urlParams.get('id');
 
-    // return data.find((p) => p.id == id);
     return new Photographer(data.find((p) => p.id == id));
 }
 
