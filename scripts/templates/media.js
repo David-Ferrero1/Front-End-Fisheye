@@ -15,6 +15,14 @@ class Media {
         media.setAttribute('class', 'mediaCard');
         media.setAttribute('role', 'link');
         media.setAttribute('tabindex', 0);
+        media.addEventListener("click", function () {
+            openLightbox(mediaArray, mediaArray.indexOf(data));
+        });
+        media.addEventListener("keydown", function (event) {
+            if (event.code == "Enter" || event.code == "Space") {
+                openLightbox(mediaArray, mediaArray.indexOf(data));
+            }
+        });
 
         const caption = document.createElement('div');
         caption.setAttribute('class', 'mediaCard_caption');
@@ -53,3 +61,4 @@ class Media {
         return article;
     }
 }
+
