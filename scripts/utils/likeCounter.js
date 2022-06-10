@@ -6,7 +6,7 @@ function createLikeCounter(likes, price) {
     divLikes.setAttribute('class', 'likeCounter-likes');
 
     const likeAmount = document.createElement('p');
-    likeAmount.setAttribute('class', '.likeCounter-amount');
+    likeAmount.setAttribute('class', 'likeCounter-amount');
     likeAmount.textContent = likes;
 
     const likeIcon = document.createElement('div');

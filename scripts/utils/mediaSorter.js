@@ -75,5 +75,6 @@ function sort(media, sortingFunc) {
             break;
     }
     closeDropdown();
+    deleteCards(mediaContainer)
     displayMediaCard(media);
 }
