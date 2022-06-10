@@ -54,13 +54,13 @@ class Media {
                 likeButton.classList.remove('mediaCard_likeButton--notLiked');
                 likeButton.classList.add('mediaCard_likeButton--liked');
                 likeAmount.textContent = currentLikes + 1;
-                let likeCounter = document.querySelector('.likeCounter_amount');
+                let likeCounter = document.querySelector('.likeCounter-amount');
                 likeCounter.textContent = parseInt(likeCounter.textContent) + 1;
             } else {
                 likeButton.classList.remove('mediaCard_likeButton--liked');
                 likeButton.classList.add('mediaCard_likeButton--notLiked');
                 likeAmount.textContent = currentLikes;
-                let likeCounter = document.querySelector('.likeCounter_amount');
+                let likeCounter = document.querySelector('.likeCounter-amount');
                 likeCounter.textContent = parseInt(likeCounter.textContent) - 1;
             }
             liked = !liked;

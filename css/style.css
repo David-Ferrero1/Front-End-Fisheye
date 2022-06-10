@@ -241,10 +241,10 @@ h1 {
 
 .lightbox-previous:hover .lightbox-previous-label,
 .lightbox-previous:focus .lightbox-previous-label, 
-.lightbox-next:hover .lightbox_next-label,
-.lightbox-next:focus .lightbox_next-label, 
-.lightbox-close:hover .lightbox_close-label,
-.lightbox-close:focus .lightbox_close-label {
+.lightbox-next:hover .lightbox-next-label,
+.lightbox-next:focus .lightbox-next-label, 
+.lightbox-close:hover .lightbox-close-label,
+.lightbox-close:focus .lightbox-close-label {
     opacity: 1;
     transform: translateY(0);
 }
