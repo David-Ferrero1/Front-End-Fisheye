@@ -212,7 +212,7 @@ h1 {
     align-items: flex-end;
 }
 
-.lightbox-previousIcon, .lightbox-nextIcon {
+.lightbox-previous-icon, .lightbox-next-icon {
     font-size: calc(48rem / 16);
     color: #901C1C;
     cursor: pointer;
@@ -239,60 +239,12 @@ h1 {
     transition: all 0.4s ease;
 }
 
-.lightbox-previous:hover .lightbox-previousLabel,
-.lightbox-previous:focus .lightbox-previousLabel, 
-.lightbox_next:hover .lightbox_nextLabel,
-.lightbox_next:focus .lightbox_nextLabel, 
-.lightbox_close:hover .lightbox_closeLabel,
-.lightbox_close:focus .lightbox_closeLabel {
+.lightbox-previous:hover .lightbox-previous-label,
+.lightbox-previous:focus .lightbox-previous-label, 
+.lightbox-next:hover .lightbox_next-label,
+.lightbox-next:focus .lightbox_next-label, 
+.lightbox-close:hover .lightbox_close-label,
+.lightbox-close:focus .lightbox_close-label {
     opacity: 1;
     transform: translateY(0);
-}
-
-@keyframes slideInNext {
-    from {
-        opacity: 0;
-        transform: translateX(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes slideOutNext {
-    from {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-}
-
-@keyframes slideInPrevious {
-    from {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes slideOutPrevious {
-    from {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateX(10px);
-    }
 }
