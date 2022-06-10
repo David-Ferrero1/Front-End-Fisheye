@@ -30,6 +30,20 @@ function displayMediaCard(media) {
     });
 }
 
+function totalLikes(media) {
+    let sum = 0;
+    media.map(medium => {
+        sum += medium.likes;
+    });
+    return(sum);
+}
+
+async function displayLikeCounter(media, ) {
+    const likeCounterContainer = document.querySelector(".likeCounter");
+    const likeCounter = createLikeCounter(totalLikes(media), );
+    likeCounterContainer.appendChild(likeCounter);
+}
+
 //On lance init
 async function init() {
     const { photographers, media } = await getPhotographers();
