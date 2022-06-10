@@ -150,6 +150,24 @@
             <div class="portfolio"></div>
             <div class="like-counter"></div>
         </main>
+        <section id="lightbox" role="dialog" aria-label="image closeup view">
+            <div class="lightbox-previous" tabindex="0" role="link">
+              <div class="fas fa-chevron-left lightbox-previous-icon" aria-labelledby="lightbox-previous-label"></div>
+              <p id="lightbox-previous-label" class="lightbox-previous-label">Précédent</p>
+            </div>
+            <div class="lightbox-content-container">
+              <div class="lightbox-content">
+              </div>
+            </div>
+            <div class="lightbox-next" tabindex="0" role="link">
+              <div class="fas fa-chevron-right lightbox-next-icon" aria-labelledby="lightbox-next-label"></div>
+              <p id="lightbox-next-label" class="lightbox-next-label">Suivant</p>
+            </div>
+            <div class="lightbox-close" tabindex="0" role="link">
+              <img src="assets/icons/closeBurgundy.svg" class="lightbox-close-icon" alt="Close dialog" aria-labelledby="lightbox-close-label" />
+              <p id="lightbox-close-label" class="lightbox-close-label">Fermer</p>
+            </div>
+          </section>
         <script src="scripts/templates/photographer.js"></script>
         <script src="scripts/factories/factoryMedia.js"></script>
         <script src="scripts/templates/media.js"></script>
@@ -158,6 +176,8 @@
         <script src="scripts/utils/contactForm.js"></script>
         <script src="scripts/utils/api.js"></script>
         <script src="scripts/utils/mediaSorter.js"></script>
+        <script src="scripts/utils/lightbox.js"></script>
+        <script src="scripts/utils/likeCounter.js"></script>
         <script src="scripts/pages/photographer.js"></script>
     </body>
 </html>
