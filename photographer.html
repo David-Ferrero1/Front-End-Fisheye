@@ -16,76 +16,6 @@
         <title>Fisheye - photographe</title>
     </head>
     <body>
-        <section id="modalContainer" role="dialog" aria-modal="true">
-            <form
-                class="modal"
-                action="#"
-                aria-labelledby="modal-title"
-                onsubmit="logFormResults();return false"
-            >
-                <fieldset>
-                    <h2 class="modal-header modal-title" id="modal-title">
-                        Contactez-moi
-                    </h2>
-                    <h2
-                        class="modal-header modal-title"
-                        id="modal-titleName"
-                    ></h2>
-                    <label class="modal-form-label" for="firstName"
-                        >Prénom</label
-                    >
-                    <input
-                        type="text"
-                        name="firstName"
-                        id="firstName"
-                        placeholder="Prénom"
-                        class="modal-form-input"
-                    />
-                    <label class="modal-form-label" for="lastName">Nom</label>
-                    <input
-                        type="text"
-                        name="lastName"
-                        id="lastName"
-                        placeholder="Nom"
-                        class="modal-form-input"
-                    />
-                    <label class="modal-form-label" for="email">Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email@email.com"
-                        class="modal-form-input"
-                    />
-                    <label class="modal-form-label" for="message"
-                        >Votre message</label
-                    >
-                    <textarea
-                        name="message"
-                        id="message"
-                        placeholder="Ecrivez ici"
-                        class="modal-form-input modal-form-input-comment"
-                    ></textarea>
-                    <button
-                        class="button-principal modal-form-submit"
-                        type="submit"
-                    >
-                        Envoyer
-                    </button>
-                    <div class="modal-close" tabindex="0" role="link">
-                        <img
-                            src="assets/icons/closeWhite.svg"
-                            class="modal-close-icon"
-                            aria-labelledby="modal-close-label"
-                            alt="Close dialog"
-                        />
-                        <p id="modal-close-label" class="modal-close-label">
-                            Fermer
-                        </p>
-                    </div>
-                </fieldset>
-            </form>
-        </section>
         <header>
             <a href="index.html" title="Accueil">
                 <img
@@ -183,6 +113,76 @@
                     Fermer
                 </p>
             </div>
+        </section>
+        <section id="modalContainer" role="dialog" aria-modal="true">
+            <form
+                class="modal"
+                action="#"
+                aria-labelledby="modal-title"
+                onsubmit="logFormResults();return false"
+            >
+                <fieldset>
+                    <h2 class="modal-header modal-title" id="modal-title">
+                        Contactez-moi
+                    </h2>
+                    <h2
+                        class="modal-header modal-title"
+                        id="modal-titleName"
+                    ></h2>
+                    <label class="modal-form-label" for="firstName"
+                        >Prénom</label
+                    >
+                    <input
+                        type="text"
+                        name="firstName"
+                        id="firstName"
+                        placeholder="Prénom"
+                        class="modal-form-input"
+                    />
+                    <label class="modal-form-label" for="lastName">Nom</label>
+                    <input
+                        type="text"
+                        name="lastName"
+                        id="lastName"
+                        placeholder="Nom"
+                        class="modal-form-input"
+                    />
+                    <label class="modal-form-label" for="email">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email@email.com"
+                        class="modal-form-input"
+                    />
+                    <label class="modal-form-label" for="message"
+                        >Votre message</label
+                    >
+                    <textarea
+                        name="message"
+                        id="message"
+                        placeholder="Ecrivez ici"
+                        class="modal-form-input modal-form-input-comment"
+                    ></textarea>
+                    <button
+                        class="button-principal modal-form-submit"
+                        type="submit"
+                    >
+                        Envoyer
+                    </button>
+                    <div class="modal-close" tabindex="0" role="link">
+                        <img
+                            src="assets/icons/closeWhite.svg"
+                            class="modal-close-icon"
+                            aria-labelledby="modal-close-label"
+                            alt="Close dialog"
+                        />
+                        <p id="modal-close-label" class="modal-close-label">
+                            Fermer
+                        </p>
+                    </div>
+                </fieldset>
+            </form>
         </section>
         <script src="scripts/templates/photographer.js"></script>
         <script src="scripts/factories/factoryMedia.js"></script>

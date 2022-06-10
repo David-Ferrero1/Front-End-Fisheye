@@ -136,7 +136,7 @@ h1 {
     position: fixed;
     bottom: 0;
     right: 36px;
-    background-color: #DB8876;
+    background-color: #db8876;
     border-radius: 5px 5px 0px 0px;
     padding: 20px 35px;
 }
@@ -194,7 +194,7 @@ h1 {
 
 .lightbox-title {
     margin-top: calc(12rem / 16);
-    color: #901C1C;
+    color: #901c1c;
     font-size: calc(24rem / 16);
 }
 
@@ -212,9 +212,10 @@ h1 {
     align-items: flex-end;
 }
 
-.lightbox-previous-icon, .lightbox-next-icon {
+.lightbox-previous-icon,
+.lightbox-next-icon {
     font-size: calc(48rem / 16);
-    color: #901C1C;
+    color: #901c1c;
     cursor: pointer;
 }
 
@@ -223,26 +224,28 @@ h1 {
     position: absolute;
     top: 62px;
     right: 62px;
-    color: #901C1C;
+    color: #901c1c;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.lightbox-previous-label, .lightbox-next-label, .lightbox-close-label {
+.lightbox-previous-label,
+.lightbox-next-label,
+.lightbox-close-label {
     opacity: 0;
     font-size: 1rem;
-    color: #901C1C;
+    color: #901c1c;
     margin-top: 0.5rem;
     transform: translateY(10px);
     transition: all 0.4s ease;
 }
 
 .lightbox-previous:hover .lightbox-previous-label,
-.lightbox-previous:focus .lightbox-previous-label, 
+.lightbox-previous:focus .lightbox-previous-label,
 .lightbox-next:hover .lightbox-next-label,
-.lightbox-next:focus .lightbox-next-label, 
+.lightbox-next:focus .lightbox-next-label,
 .lightbox-close:hover .lightbox-close-label,
 .lightbox-close:focus .lightbox-close-label {
     opacity: 1;
