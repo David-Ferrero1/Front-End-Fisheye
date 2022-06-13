@@ -31,7 +31,7 @@ closeIcon.addEventListener('keydown', function (event) {
     }
 });
 
-function logFormResults() {
+function validate() {
     console.log(`Prénom : ${formFirst.value}`);
     console.log(`Nom : ${formLast.value}`);
     console.log(`Email : ${formEmail.value}`);

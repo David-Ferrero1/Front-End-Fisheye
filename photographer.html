@@ -119,7 +119,8 @@
                 class="modal"
                 action="#"
                 aria-labelledby="modal-title"
-                onsubmit="logFormResults();return false"
+                method="post"
+                onsubmit="validate(event);return false"
             >
                 <fieldset>
                     <h2 class="modal-header modal-title" id="modal-title">
@@ -129,49 +130,69 @@
                         class="modal-header modal-title"
                         id="modal-titleName"
                     ></h2>
-                    <label class="modal-form-label" for="firstName"
-                        >Prénom</label
-                    >
-                    <input
-                        type="text"
-                        name="firstName"
-                        id="firstName"
-                        placeholder="Prénom"
-                        class="modal-form-input"
-                        minlength="2"
-                        aria-required="true"
-                    />
-                    <label class="modal-form-label" for="lastName">Nom</label>
-                    <input
-                        type="text"
-                        name="lastName"
-                        id="lastName"
-                        placeholder="Nom"
-                        class="modal-form-input"
-                        minlength="2"
-                        aria-required="true"
-                    />
-                    <label class="modal-form-label" for="email">Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email@email.com"
-                        class="modal-form-input"
-                        minlength="2"
-                        aria-required="true"
-                    />
-                    <label class="modal-form-label" for="message"
-                        >Votre message</label
-                    >
-                    <textarea
-                        name="message"
-                        id="message"
-                        placeholder="Ecrivez ici"
-                        class="modal-form-input modal-form-input-comment"
-                        minlength="15"
-                        aria-required="true"
-                    ></textarea>
+                    <div class="form-data">
+                        <label class="modal-form-label" for="firstName"
+                            >Prénom</label
+                        >
+                        <input
+                            type="text"
+                            name="firstName"
+                            id="firstName"
+                            placeholder="Prénom"
+                            class="text-control modal-form-input"
+                            required
+                            pattern="[A-z]{2,}"
+                            minlength="2"
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="form-data">
+                        <label class="modal-form-label" for="lastName"
+                            >Nom</label
+                        >
+                        <input
+                            type="text"
+                            name="lastName"
+                            id="lastName"
+                            placeholder="Nom"
+                            class="text-control modal-form-input"
+                            required
+                            pattern="[A-z]{2,}"
+                            minlength="2"
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="form-data">
+                        <label class="modal-form-label" for="email"
+                            >Email</label
+                        >
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email@email.com"
+                            class="text-control modal-form-input"
+                            required
+                            pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
+                            minlength="2"
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="form-data">
+                        <label class="modal-form-label" for="message"
+                            >Votre message</label
+                        >
+                        <textarea
+                            name="message"
+                            id="message"
+                            placeholder="Ecrivez ici"
+                            class="text-control modal-form-input modal-form-input-comment"
+                            required
+                            minlength="15"
+                            aria-required="true"
+                        ></textarea>
+                    </div>
+
                     <button
                         class="button-principal modal-form-submit"
                         type="submit"
