@@ -44,7 +44,6 @@ async function displayLikeCounter(media, price) {
     likeCounterContainer.appendChild(likeCounter);
 }
 
-
 //On lance init
 async function init() {
     const { photographers, media } = await getPhotographers();

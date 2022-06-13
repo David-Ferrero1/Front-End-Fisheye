@@ -1,5 +1,5 @@
 const modal = document.getElementById('modalContainer');
-const modalId = document.getElementById('modal-id')
+const modalId = document.getElementById('modal-id');
 const body = document.querySelector('body');
 const closeIcon = document.querySelector('.modal-close');
 const formFirst = document.getElementById('firstName');
@@ -32,7 +32,10 @@ closeIcon.addEventListener('keydown', function (event) {
     }
 });
 
-console.log(modalId.firstName);
+// console.log(modalId.firstName);
+// modalId.firstName.addEventListener('change', function() {
+//     formIsValidFirstName(this)
+// })
 
 
 modalId.addEventListener("submit", function() {
