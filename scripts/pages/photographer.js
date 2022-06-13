@@ -1,4 +1,5 @@
 const mediaContainer = document.querySelector('.portfolio');
+const txtInput1 = document.getElementById('firstName')
 
 // Prendre l'ID dans l'URL
 async function getPhotographer(data) {
@@ -44,6 +45,7 @@ async function displayLikeCounter(media, price) {
     likeCounterContainer.appendChild(likeCounter);
 }
 
+txtInput1.setCustomValidity('Prénom commençant par une majuscule sans chiffre ni caractère spécial')
 //On lance init
 async function init() {
     const { photographers, media } = await getPhotographers();
