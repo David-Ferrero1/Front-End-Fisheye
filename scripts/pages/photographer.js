@@ -1,8 +1,5 @@
 const mediaContainer = document.querySelector('.portfolio');
 
-document.getElementById("modalContainer").addEventListener("submit", function() {
-    alert('Formulaire envoyé!');
-})
 // Prendre l'ID dans l'URL
 async function getPhotographer(data) {
     const url = window.location.search;

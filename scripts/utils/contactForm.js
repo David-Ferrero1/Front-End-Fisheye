@@ -1,4 +1,5 @@
 const modal = document.getElementById('modalContainer');
+const modalId = document.getElementById('modal-id')
 const body = document.querySelector('body');
 const closeIcon = document.querySelector('.modal-close');
 const formFirst = document.getElementById('firstName');
@@ -30,6 +31,13 @@ closeIcon.addEventListener('keydown', function (event) {
         closeModal();
     }
 });
+
+console.log(modalId.firstName);
+
+
+modalId.addEventListener("submit", function() {
+    alert('Formulaire envoyé!');
+})
 
 function validate() {
     console.log(`Prénom : ${formFirst.value}`);
