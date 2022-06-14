@@ -16,76 +16,6 @@
         <title>Fisheye - photographe</title>
     </head>
     <body>
-        <section id="modalContainer" role="dialog" aria-modal="true">
-            <form
-                class="modal"
-                action="#"
-                aria-labelledby="modal-title"
-                onsubmit="logFormResults();return false"
-            >
-                <fieldset>
-                    <h2 class="modal-header modal-title" id="modal-title">
-                        Contactez-moi
-                    </h2>
-                    <h2
-                        class="modal-header modal-title"
-                        id="modal-titleName"
-                    ></h2>
-                    <label class="modal-form-label" for="firstName"
-                        >Prénom</label
-                    >
-                    <input
-                        type="text"
-                        name="firstName"
-                        id="firstName"
-                        placeholder="Prénom"
-                        class="modal-form-input"
-                    />
-                    <label class="modal-form-label" for="lastName">Nom</label>
-                    <input
-                        type="text"
-                        name="lastName"
-                        id="lastName"
-                        placeholder="Nom"
-                        class="modal-form-input"
-                    />
-                    <label class="modal-form-label" for="email">Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email@email.com"
-                        class="modal-form-input"
-                    />
-                    <label class="modal-form-label" for="message"
-                        >Votre message</label
-                    >
-                    <textarea
-                        name="message"
-                        id="message"
-                        placeholder="Ecrivez ici"
-                        class="modal-form-input modal-form-input-comment"
-                    ></textarea>
-                    <button
-                        class="button-principal modal-form-submit"
-                        type="submit"
-                    >
-                        Envoyer
-                    </button>
-                    <div class="modal-close" tabindex="0" role="link">
-                        <img
-                            src="assets/icons/closeWhite.svg"
-                            class="modal-close-icon"
-                            aria-labelledby="modal-close-label"
-                            alt="Close dialog"
-                        />
-                        <p id="modal-close-label" class="modal-close-label">
-                            Fermer
-                        </p>
-                    </div>
-                </fieldset>
-            </form>
-        </section>
         <header>
             <a href="index.html" title="Accueil">
                 <img
@@ -148,16 +78,150 @@
                 </div>
             </div>
             <div class="portfolio"></div>
-            <div class="like-counter"></div>
+            <div class="likeCounter"></div>
         </main>
+        <section id="lightbox" role="dialog" aria-label="image closeup view">
+            <div class="lightbox-previous" tabindex="0" role="link">
+                <div
+                    class="fas fa-chevron-left lightbox-previous-icon"
+                    aria-labelledby="lightbox-previous-label"
+                ></div>
+                <p id="lightbox-previous-label" class="lightbox-previous-label">
+                    Précédent
+                </p>
+            </div>
+            <div class="lightbox-content-container">
+                <div class="lightbox-content"></div>
+            </div>
+            <div class="lightbox-next" tabindex="0" role="link">
+                <div
+                    class="fas fa-chevron-right lightbox-next-icon"
+                    aria-labelledby="lightbox-next-label"
+                ></div>
+                <p id="lightbox-next-label" class="lightbox-next-label">
+                    Suivant
+                </p>
+            </div>
+            <div class="lightbox-close" tabindex="0" role="link">
+                <img
+                    src="assets/icons/closeBurgundy.svg"
+                    class="lightbox-close-icon"
+                    alt="Close dialog"
+                    aria-labelledby="lightbox-close-label"
+                />
+                <p id="lightbox-close-label" class="lightbox-close-label">
+                    Fermer
+                </p>
+            </div>
+        </section>
+        <section id="modalContainer" role="dialog" aria-modal="true">
+            <form
+                class="modal"
+                id="modal-id"
+                action="#"
+                aria-labelledby="modal-title"
+                method="post"
+                onsubmit="validate(event);return false"
+            >
+                <fieldset>
+                    <h2 class="modal-header modal-title" id="modal-title">
+                        Contactez-moi
+                    </h2>
+                    <h2
+                        class="modal-header modal-title"
+                        id="modal-titleName"
+                    ></h2>
+                    <div class="form-data">
+                        <label class="modal-form-label" for="firstName"
+                            >Prénom</label
+                        >
+                        <input
+                            type="text"
+                            name="firstName"
+                            id="firstName"
+                            placeholder="Prénom"
+                            class="text-control modal-form-input"
+                            required
+                            minlength="2"
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="form-data">
+                        <label class="modal-form-label" for="lastName"
+                            >Nom</label
+                        >
+                        <input
+                            type="text"
+                            name="lastName"
+                            id="lastName"
+                            placeholder="Nom"
+                            class="text-control modal-form-input"
+                            required
+                            minlength="2"
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="form-data">
+                        <label class="modal-form-label" for="email"
+                            >Email</label
+                        >
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email@email.com"
+                            class="text-control modal-form-input"
+                            required
+                            minlength="2"
+                            aria-required="true"
+                        />
+                    </div>
+                    <div class="form-data">
+                        <label class="modal-form-label" for="message"
+                            >Votre message</label
+                        >
+                        <textarea
+                            name="message"
+                            id="message"
+                            placeholder="Ecrivez ici"
+                            class="text-control modal-form-input modal-form-input-comment"
+                            required
+                            minlength="15"
+                            aria-required="true"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        class="button-principal modal-form-submit"
+                        type="submit"
+                    >
+                        Envoyer
+                    </button>
+                    <div class="modal-close" tabindex="0" role="link">
+                        <img
+                            src="assets/icons/closeWhite.svg"
+                            class="modal-close-icon"
+                            aria-labelledby="modal-close-label"
+                            alt="Close dialog"
+                        />
+                        <p id="modal-close-label" class="modal-close-label">
+                            Fermer
+                        </p>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
         <script src="scripts/templates/photographer.js"></script>
         <script src="scripts/factories/factoryMedia.js"></script>
         <script src="scripts/templates/media.js"></script>
         <script src="scripts/templates/image.js"></script>
         <script src="scripts/templates/video.js"></script>
+        <script src="scripts/utils/likeCounter.js"></script>
         <script src="scripts/utils/contactForm.js"></script>
         <script src="scripts/utils/api.js"></script>
         <script src="scripts/utils/mediaSorter.js"></script>
+        <script src="scripts/utils/deleteCards.js"></script>
+        <script src="scripts/utils/lightbox.js"></script>
         <script src="scripts/pages/photographer.js"></script>
     </body>
 </html>

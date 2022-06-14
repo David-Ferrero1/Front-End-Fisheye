@@ -1,11 +1,13 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const modal = document.getElementById('modalContainer');
+const modalId = document.getElementById('modal-id');
 const body = document.querySelector('body');
 const closeIcon = document.querySelector('.modal-close');
-const firstNameForm = document.getElementById('firstName');
-const lastNameForm = document.getElementById('lastName');
-const emailForm = document.getElementById('email');
-const messageForm = document.getElementById('message');
-const submitButton = document.querySelector('.modal-form-submit');
+const formFirst = document.getElementById('firstName');
+const formLast = document.getElementById('lastName');
+const formEmail = document.getElementById('email');
+const formMessage = document.getElementById('message');
 
 function displayModal() {
     modal.style.display = 'flex';
@@ -13,7 +15,7 @@ function displayModal() {
     body.style.height = '100vh';
     body.style.width = '100vw';
     body.style.overflow = 'hidden';
-    firstNameForm.focus();
+    formFirst.focus();
 }
 
 function closeModal() {
@@ -31,9 +33,13 @@ closeIcon.addEventListener('keydown', function (event) {
     }
 });
 
-function logFormResults() {
-    console.log(`Prénom : ${firstNameForm.value}`);
-    console.log(`Nom : ${lastNameForm.value}`);
-    console.log(`Email : ${emailForm.value}`);
-    console.log(`Message : ${messageForm.value}`);
+modalId.addEventListener('submit', function () {
+    alert('Formulaire envoyé!');
+});
+
+function validate() {
+    console.log(`Prénom : ${formFirst.value}`);
+    console.log(`Nom : ${formLast.value}`);
+    console.log(`Email : ${formEmail.value}`);
+    console.log(`Message : ${formMessage.value}`);
 }

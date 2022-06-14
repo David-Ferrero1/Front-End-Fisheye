@@ -1,7 +1,9 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 class Photographer {
     constructor(photographer) {
         this.name = photographer.name;
-        this.picture = `assets/images/${photographer.portrait}`;
+        this.picture = `assets/images/thumbnails/${photographer.portrait}`;
         this.id = photographer.id;
         this.city = photographer.city;
         this.country = photographer.country;

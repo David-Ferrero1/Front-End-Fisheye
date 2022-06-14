@@ -1,6 +1,5 @@
 let data;
 
-/* Trouver tous les photographes */
 async function getPhotographers() {
     if (data) {
         return data;
