@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const mediaContainer = document.querySelector('.portfolio');
 
 async function getPhotographer(data) {

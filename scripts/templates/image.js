@@ -11,7 +11,7 @@ class Image extends Media {
         const media = document.createElement('img');
         media.setAttribute(
             'src',
-            `assets/photographers/${this.photographerId}/${this.image}`,
+            `assets/photographers/${this.photographerId}/thumbnails/${this.image}`,
         );
         return this.createMediaCaption(media, this.mediaArray, this.data);
     }
