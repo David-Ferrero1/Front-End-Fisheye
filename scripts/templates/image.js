@@ -1,3 +1,6 @@
+/* eslint-disable no-redeclare */
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-undef
 class Image extends Media {
     constructor(image, mediaArray) {
         super(image, mediaArray);

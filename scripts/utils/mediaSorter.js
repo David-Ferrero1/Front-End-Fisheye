@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const listbox = document.querySelector('.media-sorter-listbox');
 const button = document.querySelector('.media-sorter-button');
 const selectDefaultValue = document.querySelector('.media-sorter-button-text');

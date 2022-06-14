@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const lightbox = document.getElementById('lightbox');
 const header = document.querySelector('header');
 const main = document.getElementById('main');
@@ -40,7 +42,7 @@ function openLightbox(mediaArray, id, effect) {
         media = createImage(`assets/photographers/${photographerId}/${image}`);
     } else {
         media = document.createElement('p');
-        media.textContent = "Désolés, nous n'avons pas trouvé ce fichier.";
+        media.textContent = 'Désolés, nous n\'avons pas trouvé ce fichier.';
     }
 
     media.setAttribute('class', 'lightbox-media');

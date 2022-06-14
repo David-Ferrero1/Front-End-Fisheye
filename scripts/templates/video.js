@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 class Video extends Media {
     constructor(video, mediaArray) {
         super(video, mediaArray);

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function createLikeCounter(likes, price) {
     const likeCounterContent = document.createElement('div');
     likeCounterContent.setAttribute('class', 'likeCounter-content');

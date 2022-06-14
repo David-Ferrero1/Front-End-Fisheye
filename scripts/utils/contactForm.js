@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const modal = document.getElementById('modalContainer');
 const modalId = document.getElementById('modal-id');
 const body = document.querySelector('body');
@@ -6,7 +8,6 @@ const formFirst = document.getElementById('firstName');
 const formLast = document.getElementById('lastName');
 const formEmail = document.getElementById('email');
 const formMessage = document.getElementById('message');
-const submitButton = document.querySelector('.modal-form-submit');
 
 function displayModal() {
     modal.style.display = 'flex';
@@ -32,15 +33,9 @@ closeIcon.addEventListener('keydown', function (event) {
     }
 });
 
-// console.log(modalId.firstName);
-// modalId.firstName.addEventListener('change', function() {
-//     formIsValidFirstName(this)
-// })
-
-
-modalId.addEventListener("submit", function() {
+modalId.addEventListener('submit', function () {
     alert('Formulaire envoyé!');
-})
+});
 
 function validate() {
     console.log(`Prénom : ${formFirst.value}`);
