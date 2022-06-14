@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 const listbox = document.querySelector('.media-sorter-listbox');
